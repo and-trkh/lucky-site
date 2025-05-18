@@ -150,10 +150,6 @@
   margin-bottom: 2.5625rem;
 }
 
-.tabs__element:nth-child(1) {
-  background-color: rgb(250, 235, 215);
-}
-
 .tabs__element:nth-child(2) {
   background-color: rgb(229, 250, 215);
 }

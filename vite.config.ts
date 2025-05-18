@@ -1,6 +1,7 @@
 import browserslist from 'browserslist';
 import { browserslistToTargets } from 'lightningcss';
 import { svgSpritemap } from 'vite-plugin-svg-spritemap';
+import { setupPlugins } from '@responsive-image/vite-plugin';
 
 export default {
   css: {
@@ -14,7 +15,16 @@ export default {
   },
   plugins: [
     svgSpritemap({
-      pattern: 'src/icons/*.svg',
+      pattern: 'src/assets/icons/*.svg',
+    }),
+    setupPlugins({
+      include: /^[^?]+\.jpg\?.*responsive.*$/,
+      placeholder: {
+        type: 'none',
+      },
     }),
   ],
+  optimizeDeps: {
+    include: ['tslib', '@responsive-image/wc'],
+  },
 };

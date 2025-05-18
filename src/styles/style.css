@@ -4,6 +4,7 @@
 @import url('./button.css');
 @import url('./badge.css');
 @import url('./list.css');
+@import url('./slider.css');
 
 :root {
   font-family: 'Open Sans', sans-serif;
@@ -25,6 +26,7 @@
   --black: #131415;
   --white: #ffffff;
   --light-blue: #eff8ff;
+  --brand-blue: #0e90de;
   --main-gradient: linear-gradient(
     78.33deg,
     rgba(215, 69, 150, 1) 0.009999999747378752%,
@@ -121,8 +123,8 @@ a {
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 58.25rem auto;
+  display: flex;
+  justify-content: space-between;
   gap: 7.5rem;
 
   & .text {
@@ -131,4 +133,11 @@ a {
 }
 
 .col {
+  &:first-child {
+    /* max-width: 58.25rem; */
+  }
+
+  &:last-child {
+    max-width: 44.25rem;
+  }
 }
