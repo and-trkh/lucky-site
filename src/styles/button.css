@@ -1,0 +1,50 @@
+.button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  border-radius: 3.125rem;
+  padding: 1.25rem 4.3125rem;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s;
+  }
+  &::before {
+    background: var(--red-gradient);
+  }
+
+  &::after {
+    background: var(--main-gradient);
+    opacity: 0;
+  }
+}
+
+.button > * {
+  position: relative;
+  z-index: 1;
+}
+.button:hover,
+.button:focus {
+  &::after {
+    opacity: 1;
+  }
+}
+.button:active {
+  &::after {
+    opacity: 1;
+  }
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

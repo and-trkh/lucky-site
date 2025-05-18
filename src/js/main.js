@@ -31,9 +31,9 @@ const initTabIconToggler = () => {
    */
   const updateIconState = (tabControl) => {
     // Находим контейнер иконки-стрелки/крестика внутри текущего таба
-    const iconContainer = tabControl.querySelector('.tabs__button');
+    const iconContainer = tabControl.querySelector('.tabs__control-button');
     if (!iconContainer) {
-      // console.warn('Не найден контейнер .tabs__button для иконки в табе:', tabControl);
+      // console.warn('Не найден контейнер .tabs__control-button для иконки в табе:', tabControl);
       return;
     }
 

@@ -1,6 +1,9 @@
 @import url('./reset.css');
 @import url('./tabs.css');
 @import url('./data-tabs.css');
+@import url('./button.css');
+@import url('./badge.css');
+@import url('./list.css');
 
 :root {
   font-family: 'Open Sans', sans-serif;
@@ -28,6 +31,11 @@
     rgba(242, 70, 78, 1) 36.587658524513245%,
     rgba(133, 122, 221, 1) 68.57713460922241%,
     rgba(1, 146, 222, 1) 100%
+  );
+  --red-gradient: linear-gradient(
+    180deg,
+    rgba(237, 1, 137, 1) 0.009999999747378752%,
+    rgba(243, 41, 59, 1) 100%
   );
 }
 
@@ -105,4 +113,22 @@ a {
     mask-composite: exclude;
     transition: padding 0.3s;
   }
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 58.25rem auto;
+  gap: 7.5rem;
+
+  & .text {
+    width: 40.82375rem;
+  }
+}
+
+.col {
 }

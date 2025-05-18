@@ -97,7 +97,7 @@
   }
 }
 
-.tabs__button {
+.tabs__control-button {
   position: relative;
   display: grid;
   place-content: center;
@@ -131,7 +131,6 @@
 }
 
 .tabs__element {
-  padding: 1.5625rem;
   width: 100%;
 }
 
@@ -140,7 +139,15 @@
 }
 
 .tabs__element p:not(:last-child) {
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 2.375rem 0;
+}
+
+.tabs__badge {
+  margin-bottom: 1.0625rem;
+}
+
+.tabs__list {
+  margin-bottom: 2.5625rem;
 }
 
 .tabs__element:nth-child(1) {

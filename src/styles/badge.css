@@ -1,0 +1,12 @@
+.badge {
+  width: max-content;
+  padding: 1px 0.5625rem 1px 0.5625rem;
+  border-radius: 1.6875rem;
+  background: var(--main-gradient);
+}
+
+.badge__text {
+  color: var(--white);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
