@@ -38,13 +38,13 @@ const initTabIconToggler = () => {
     // Проверяем, активен ли таб
     if (tabControl.classList.contains('is-active')) {
       // Если активен, устанавливаем иконку "close"
-      useElement.setAttribute('href', '/spritemap.svg#close');
+      useElement.setAttribute('href', './spritemap.svg#close');
       // Атрибут xlink:href устарел, но для старых браузеров можно оставить:
-      // useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/spritemap.svg#close');
+      // useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', './spritemap.svg#close');
     } else {
       // Если неактивен, устанавливаем иконку "arrow"
-      useElement.setAttribute('href', '/spritemap.svg#arrow');
-      // useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/spritemap.svg#arrow');
+      useElement.setAttribute('href', './spritemap.svg#arrow');
+      // useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', './spritemap.svg#arrow');
     }
   };
 
