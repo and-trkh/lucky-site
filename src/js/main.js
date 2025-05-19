@@ -3,10 +3,12 @@ import { initTabs } from './init-tabs';
 import { initSlider } from './slider';
 import { initTabIconToggler } from './tab-icon-toggler';
 import { initResponsiveImages } from './image-loader';
+import { initSuccessPopup } from './popup';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Инициализируем адаптивные изображения, как только DOM готов
   initResponsiveImages();
+  initSuccessPopup();
 
   // Остальные инициализации можно оставить в событии 'load',
   // если они зависят от полной загрузки всех ресурсов (включая стили, обычные img и т.д.)

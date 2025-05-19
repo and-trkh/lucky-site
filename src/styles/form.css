@@ -133,3 +133,7 @@
 .form__checkbox:focus + .form__checkbox-label::before {
   box-shadow: 0 0 0 2px var(--brand-blue-alpha); /* Подсветка при фокусе */
 }
+
+.form__checkbox:focus + .form__checkbox-label::before {
+  box-shadow: 0 0 0 2px var(--brand-blue-alpha); /* Подсветка при фокусе */
+}
