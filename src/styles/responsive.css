@@ -1,0 +1,249 @@
+/* Responsive styles for the project */
+
+/* Tablet styles */
+@media screen and (max-width: 1280px) {
+  body {
+    padding: 64px clamp(1rem, 3vw, 32px);
+  }
+
+  .title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .content .text {
+    width: 100%;
+  }
+
+  .contacts {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .contacts .col:first-child {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .contacts .col:last-child {
+    max-width: 100%;
+  }
+
+  .tabs__controls {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .form {
+    padding: 2rem 1.5rem;
+  }
+
+  .form__input {
+    margin: 0;
+    padding: 0.3125rem 0;
+  }
+
+  .form__title {
+    margin-bottom: 1rem;
+  }
+
+  .form::before {
+    display: none; /* Скрываем большую иконку конверта на планшетах */
+  }
+
+  .tabs__control-button {
+    display: none;
+  }
+
+  .tabs__icon {
+    top: -16px;
+    left: 16px;
+  }
+
+  .slider__pagination {
+    bottom: 20px !important;
+  }
+
+  .tabs__control {
+    min-height: 125px;
+    font-size: 1.25rem;
+  }
+
+  .contacts-list__link {
+    font-size: 1.25rem;
+  }
+
+  .contacts .title {
+    margin-bottom: 1.5rem;
+  }
+  .contacts-list__list {
+    margin-bottom: 1.5rem;
+  }
+
+  .contacts-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .success-popup__message {
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  .slider .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .section:first-child .col:last-child {
+    margin: 0 auto;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+
+  .main {
+    margin-top: 1rem;
+  }
+
+  .tabs {
+    padding-top: 16px;
+  }
+
+  .tabs__controls {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tabs__control {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 5rem;
+    padding: 0 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .tabs__icon {
+    display: none;
+    top: -24px;
+    left: 24px;
+    width: 42px;
+    height: 42px;
+
+    & svg {
+      /* width: 24px;
+      height: 24px; */
+    }
+  }
+
+  .contacts {
+    padding: 1.5rem 1rem;
+  }
+
+  .form {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .form__title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .success-popup__content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .slider .swiper-pagination-bullet {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .section:first-child {
+    margin-bottom: 0;
+  }
+
+  .swiper-slide {
+    border-radius: 2rem;
+  }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .tabs__element p:not(:last-child) {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .contacts-list__title {
+    font-size: 1rem;
+  }
+
+  .contacts-list__item {
+    font-size: 1rem;
+  }
+
+  .form__checkbox-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__checkbox-label {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .contacts-list__link {
+    line-height: 1.5rem;
+  }
+
+  .success-popup__message {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .form__checkbox-label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .slider .swiper-button-next,
+  .slider .swiper-button-prev {
+    display: none;
+  }
+
+  .slider .swiper-pagination {
+    bottom: 5px;
+  }
+}

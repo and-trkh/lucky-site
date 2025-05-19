@@ -109,9 +109,9 @@ a {
 }
 
 .title {
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 800;
-  line-height: 62px;
+  line-height: 3.875rem;
 }
 
 .section {
@@ -139,7 +139,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     padding: 1px;
     background: var(--main-gradient);
     mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -156,7 +156,6 @@ a {
 .content {
   display: flex;
   justify-content: space-between;
-  gap: 7.5rem;
 
   & .text {
     width: 40.82375rem;
