@@ -4,7 +4,7 @@ import { svgSpritemap } from 'vite-plugin-svg-spritemap';
 import { setupPlugins } from '@responsive-image/vite-plugin';
 
 export default {
-  base: './',
+  base: '/lucky-site/',
   css: {
     transformer: 'lightningcss',
     lightningcss: {
