@@ -173,10 +173,68 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex facere exercitationem at autem fugiat? Quos
-        optio numquam eos, maiores ducimus temporibus obcaecati eum, sunt ipsum, veritatis cupiditate sint quia.</p>
-
+    <section class="section contacts">
+      <div class="col">
+        <h2 class="title">Контакты</h2>
+        <div class="contacts-list">
+          <h3 class="contacts-list__title">Адрес</h3>
+          <ul class="contacts-list__list">
+            <li class="contacts-list__item">
+              <a class="contacts-list__link" href="#"><span class="contacts-list__icon">
+                  <svg>
+                    <use xlink:href="/spritemap.svg#pin"></use>
+                  </svg>
+                </span>г. Краснодар
+                ул. Бабушкина 110, офис 4</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts-list">
+          <h3 class="contacts-list__title">Контакты</h3>
+          <ul class="contacts-list__list">
+            <li class="contacts-list__item">
+              <a class="contacts-list__link" href="mailto:ra-matina@mail.ru"><span class="contacts-list__icon">
+                  <svg>
+                    <use xlink:href="/spritemap.svg#envelope"></use>
+                  </svg>
+                </span>ra-matina@mail.ru</a>
+            </li>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link" href="tel:+78612463336"><span class="contacts-list__icon">
+                  <svg>
+                    <use xlink:href="/spritemap.svg#phone"></use>
+                  </svg>
+                </span>8 (861) 246-33-36</a>
+            </li>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link" href="tel:+79014904646"><span class="contacts-list__icon">
+                  <svg>
+                    <use xlink:href="/spritemap.svg#phone"></use>
+                  </svg>
+                </span>8 (901) 490-46-46</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <form action="" class="form">
+          <h2 class="form__title">Заказать звонок</h2>
+          <div class="form__field">
+            <label class="form__label visually-hidden" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Имя" required>
+          </div>
+          <div class="form__field">
+            <label class="form__label visually-hidden" for="phone">Номер телефона</label>
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="Номер телефона" required
+              pattern="^[+]?[0-9()-\s]+$">
+          </div>
+          <div class="form__checkbox-wrapper">
+            <input class="form__checkbox" type="checkbox" id="agreement" name="agreement" required>
+            <label class="form__checkbox-label" for="agreement">Согласие на обработку персональных данных</label>
+          </div>
+          <button class="button form__button" type="submit"><span>Отправить</span></button>
+        </form>
+      </div>
     </section>
   </main>
   <script type="module" src="/src/js/main.js"></script>

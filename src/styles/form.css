@@ -1,0 +1,135 @@
+.form {
+  background-color: var(--white);
+  border-radius: 2rem;
+  padding: 5.5625rem 4.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -13.6875rem;
+    width: 36.1875rem;
+    height: 36.1875rem;
+    background-image: url('../assets/icons/envelope-alpha.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.form__title {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 800;
+  margin-bottom: 3.25rem;
+}
+
+.form__field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.75rem;
+}
+
+.form__input {
+  width: 100%;
+  height: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid var(--brand-blue-alpha);
+  outline: none;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--black);
+  background-color: transparent;
+
+  &::placeholder {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+.form__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 2.4375rem;
+}
+
+.form__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__checkbox-label {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: var(--black);
+  user-select: none;
+}
+
+/* Стили для кастомного чекбокса (квадратик) */
+.form__checkbox-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem; /* Размер кастомного чекбокса */
+  height: 1.5rem;
+  border: 2px solid var(--brand-blue); /* Цвет рамки */
+  border-radius: 0.25rem; /* Скругление углов */
+  background-color: var(--white); /* Фон чекбокса */
+  transition: background-color var(--animation-duration-fast)
+      var(--animation-timing-function-ease),
+    border-color var(--animation-duration-fast)
+      var(--animation-timing-function-ease);
+}
+
+/* Стили для галочки внутри кастомного чекбокса */
+.form__checkbox-label::after {
+  content: '';
+  position: absolute;
+  left: 0.5rem; /* Позиционирование галочки */
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg) scale(0);
+  width: 0.5rem; /* Размер галочки */
+  height: 1rem;
+  border: solid var(--white); /* Цвет галочки */
+  border-width: 0 3px 3px 0;
+  transition: transform var(--animation-duration-fast)
+    var(--animation-timing-function-ease);
+}
+
+/* Стили при активном чекбоксе */
+.form__checkbox:checked + .form__checkbox-label::before {
+  background-color: var(--brand-blue); /* Фон активного чекбокса */
+  border-color: var(--brand-blue); /* Цвет рамки активного чекбокса */
+}
+
+.form__checkbox:checked + .form__checkbox-label::after {
+  transform: translateY(-50%) rotate(45deg) scale(1); /* Показать галочку */
+}
+
+/* Стили для фокуса (например, при навигации с клавиатуры) */
+.form__checkbox:focus + .form__checkbox-label::before {
+  box-shadow: 0 0 0 2px var(--brand-blue-alpha); /* Подсветка при фокусе */
+}

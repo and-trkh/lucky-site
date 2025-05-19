@@ -16,3 +16,13 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabIconToggler();
   });
 });
+
+// Функция для валидации ввода номера телефона в реальном времени
+const phoneInput = document.getElementById('phone');
+
+if (phoneInput) {
+  phoneInput.addEventListener('input', function (e) {
+    // Удаляем все символы, кроме цифр, +, -, (, ), пробела
+    e.target.value = e.target.value.replace(/[^0-9+\-()\s]/g, '');
+  });
+}

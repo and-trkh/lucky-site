@@ -4,7 +4,10 @@
 @import url('./button.css');
 @import url('./badge.css');
 @import url('./list.css');
+@import url('./contacts-list.css');
 @import url('./slider.css');
+@import url('./form.css');
+@import url('./utils.css');
 
 :root {
   font-family: 'Open Sans', sans-serif;
@@ -25,8 +28,10 @@
   /* VARIABLES */
   --black: #131415;
   --white: #ffffff;
+  --red: #f3293b;
   --light-blue: #eff8ff;
   --brand-blue: #0e90de;
+  --brand-blue-alpha: rgba(14, 144, 222, 0.16);
   --main-gradient: linear-gradient(
     78.33deg,
     rgba(215, 69, 150, 1) 0.009999999747378752%,
@@ -39,6 +44,15 @@
     rgba(237, 1, 137, 1) 0.009999999747378752%,
     rgba(243, 41, 59, 1) 100%
   );
+
+  /* ANIMATIONS */
+  --animation-duration-fast: 0.15s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.5s;
+  --animation-timing-function-ease: ease;
+  --animation-timing-function-ease-in-out: ease-in-out;
+  --animation-default: var(--animation-duration-normal)
+    var(--animation-timing-function-ease);
 }
 
 body {
@@ -96,7 +110,19 @@ a {
 }
 
 .section {
-  /* background-color: var(--light-blue); */
+  &:nth-child(1) {
+    margin-bottom: 3rem;
+
+    & .col {
+      &:first-child {
+        /* max-width: 58.25rem; */
+      }
+
+      &:last-child {
+        max-width: 44.25rem;
+      }
+    }
+  }
 }
 
 .control {
@@ -132,12 +158,27 @@ a {
   }
 }
 
-.col {
-  &:first-child {
-    /* max-width: 58.25rem; */
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 6rem 5rem;
+  background-color: var(--light-blue);
+
+  & .col {
+    &:first-child {
+      width: 30.625rem;
+      padding-top: 2.9375rem;
+    }
+
+    &:last-child {
+      flex-grow: 1;
+      max-width: 68.125rem;
+      overflow: hidden;
+    }
   }
 
-  &:last-child {
-    max-width: 44.25rem;
+  .title {
+    margin-bottom: 2.9375rem;
   }
 }
