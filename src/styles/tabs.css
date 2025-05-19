@@ -179,7 +179,7 @@
   }
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 767px) {
   .tabs [data-tabs='accordion'] {
     margin: 0.625rem 2% 0;
   }
@@ -199,9 +199,5 @@
     margin: 0.625rem 2% 0;
     padding: 0.625rem;
     width: 45%;
-  }
-
-  .tabs__element {
-    padding: 0.9375rem;
   }
 }
