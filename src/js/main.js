@@ -4,11 +4,13 @@ import { initSlider } from './slider';
 import { initTabIconToggler } from './tab-icon-toggler';
 import { initResponsiveImages } from './image-loader';
 import { initSuccessPopup } from './popup';
+import { initFormValidation } from './form-validation';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Инициализируем адаптивные изображения, как только DOM готов
   initResponsiveImages();
   initSuccessPopup();
+  initFormValidation(); // Инициализируем кастомную валидацию формы
 
   // Остальные инициализации можно оставить в событии 'load',
   // если они зависят от полной загрузки всех ресурсов (включая стили, обычные img и т.д.)
@@ -18,13 +20,3 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabIconToggler();
   });
 });
-
-// Функция для валидации ввода номера телефона в реальном времени
-const phoneInput = document.getElementById('phone');
-
-if (phoneInput) {
-  phoneInput.addEventListener('input', function (e) {
-    // Удаляем все символы, кроме цифр, +, -, (, ), пробела
-    e.target.value = e.target.value.replace(/[^0-9+\-()\s]/g, '');
-  });
-}

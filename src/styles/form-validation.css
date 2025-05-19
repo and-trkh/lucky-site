@@ -1,0 +1,19 @@
+.form__error {
+  display: block;
+  color: #f3293b;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.form__input--error {
+  border-bottom-color: #f3293b;
+}
+
+.form__checkbox-label--error {
+  color: #f3293b;
+}
+
+.button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
