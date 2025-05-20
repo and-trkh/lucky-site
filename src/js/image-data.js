@@ -18,7 +18,7 @@ const imageSources = {
   slide4: slide4ImageData,
 };
 
-console.groupCollapsed('%c⚠️ Ошибка плагина vite-plugin-svg-spritemap');
+console.groupCollapsed('⚠️ Ошибка плагина @responsive-image/vite-plugin');
 console.info('Привет)');
 console.error(
   "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'lqip')",
