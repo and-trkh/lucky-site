@@ -18,4 +18,14 @@ const imageSources = {
   slide4: slide4ImageData,
 };
 
+console.groupCollapsed('%c⚠️ Ошибка плагина vite-plugin-svg-spritemap');
+console.info('Привет)');
+console.error(
+  "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'lqip')",
+);
+console.info(
+  'Проблема возникает при работе с плейсхолдерами изображений, почему то не сгенерировались плейсхолдеры lqip',
+);
+console.groupEnd();
+
 export { imageSources };
